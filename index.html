@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Portfolio Insights</title>
+    <meta name="description" content="Web2Serial Bridge">
+    <meta name="author" content="Pratik Panchal">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h2 align="center"><br />Web2Serial Bridge
+    </h2>
+
+    <div align="center">
+        <table class="dataTable">
+            <col width="120px">
+            <col width="90px">
+            <col width="80px">
+            <col width="60px">
+
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+                <th colspan=2>Client statistics</th>
+            </tr>
+
+            <tr>
+                <td>
+                    Throttle Control<br>(periodicity in ms. R=[100,15000]):
+                </td>
+                <td><span id="id_throttleValue">
+                        <form>
+                            <label for="quantity"></label>
+                            <input type="number" id="quantity" name="quantity" min="100" max="15000">
+                            <input type="Submit" value="Save">
+                        </form>
+                    </span></td>
+
+                    <td>Requests issued:</td>
+                    <td><span id="noOfRequests"></span></td>
+            </tr>
+
+            <tr>
+                <td>Mouse coordinates</br>(x, y)</td>
+                <td><span id="id_unitCircleCoordinates"></span></td>
+
+                <td>Last sent:</td>
+                <td><span id="latestSentParms"></span></td>
+            </tr>
+
+            <tr>
+                <td>Current frame size</br>(wXh)</td>
+                <td><span id="idCurrentFrameSize"></span></td>
+
+                <td>Responses received:</td>
+                <td><span id="noOfResponses"></span> </td>
+            </tr>
+
+            <tr>
+                <td>Byte-scaled coordinates</br>(&Delta;<i>x,</i> &Delta;<i>y</i>)</td>
+                <td><span id="coordinates"></span> </td>
+
+                <td>Client-to-Server</br>Queue length; <i>csql</i>:</td>
+                <td><span id="queueLength"></span> </td>
+            </tr>
+
+            <tr>
+                <td>Y-axis inverted</br>(&Delta;<i>x,</i> &Delta;<i>y</i>)</td>
+                <td><b>
+                    (<span id="idXaxisCorrected"></span>,
+                    <span id="idYaxisCorrected"></span>) 
+                </b></td>
+
+                <td>Server-to-Controller</br>Queue length; <i>scql</i>:</td>
+                <td><span id="id_scql"></span> </td>
+            </tr>
+
+            <tr>
+                <td colspan="1">Input type:</td>
+                <td colspan="3"><span id="inputType"></span> </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="footer">
+        <p>&#x24B8; 2018, Pratik Panchal, pp423@cornell.edu</p>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
