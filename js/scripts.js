@@ -158,7 +158,6 @@ function consumeJsonResponseObj(jsonObj) {
     // Set UI components
     document.getElementById('id_scql')
         .innerHTML = jsJson.cmdFileCount;
-
 }
 
 function pollCall() {
